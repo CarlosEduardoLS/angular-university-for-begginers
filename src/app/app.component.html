@@ -5,7 +5,23 @@
   />
 </div>
 
-<div class="courses" *ngFor="let course of courses">
-  <course-card [course]="course" (selectedCourse)="getSelectedCourse($event)">
+<div class="courses">
+  <course-card
+    *ngFor="
+      let course of courses;
+      index as idx;
+      first as isFirst;
+      last as isLast;
+      even as isEven;
+      odd as isOdd
+    "
+    [course]="course"
+    [class.is-first]="isFirst"
+    [class.is-last]="isLast"
+    [class.is-even]="isEven"
+    [class.is-odd]="isOdd"
+    [cardIndex]="idx + 1"
+    (selectedCourse)="getSelectedCourse($event)"
+  >
   </course-card>
 </div>

@@ -1,10 +1,16 @@
-<div class="course-card">
+<div class="course-card" *ngIf="course">
   <div class="course-title">{{ cardIndex + " - " + course.description }}</div>
-  <img width="300" alt="Angular Logo" [src]="course.iconUrl" />
-
+  <img
+    *ngIf="course.iconUrl; else noImage"
+    width="300"
+    alt="Angular Logo"
+    [src]="course.iconUrl"
+  />
+  <ng-template #noImage>
+    <span>No image is available.</span>
+  </ng-template>
   <div class="course-description">
     {{ course.longDescription }}
   </div>
-
   <button (click)="selectCourse()">View Course</button>
 </div>

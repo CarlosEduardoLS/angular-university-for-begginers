@@ -16,4 +16,8 @@ export class CourseCardComponent {
   selectCourse() {
     this.selectedCourse.emit(this.course);
   }
+
+  cardClasses() {
+    return { beginner: this.course.category === 'BEGINNER' };
+  }
 }

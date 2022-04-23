@@ -5,6 +5,6 @@
   />
 </div>
 
-<div class="courses">
-  <course-card></course-card>
+<div class="courses" *ngFor="let course of courses">
+  <course-card [course]="course"> </course-card>
 </div>

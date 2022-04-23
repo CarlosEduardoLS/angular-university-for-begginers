@@ -3,8 +3,12 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  title = 'angular-university-for-begginers';
+  title = 'Angular University';
+
+  onKeyUp(newTitle: string) {
+    this.title = newTitle;
+  }
 }

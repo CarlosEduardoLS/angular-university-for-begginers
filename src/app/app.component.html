@@ -6,5 +6,6 @@
 </div>
 
 <div class="courses" *ngFor="let course of courses">
-  <course-card [course]="course"> </course-card>
+  <course-card [course]="course" (selectedCourse)="getSelectedCourse($event)">
+  </course-card>
 </div>

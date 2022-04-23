@@ -6,22 +6,21 @@ import { Course } from '../model/course';
   templateUrl: './course-card.component.html',
   styleUrls: ['./course-card.component.css'],
 })
-export class CourseCardComponent {
-  @Input() course: Course;
+export class CourseCardComponent implements OnInit {
+  @Input()
+  course: Course;
 
-  @Input() cardIndex: number;
+  @Input()
+  cardIndex: number;
 
-  @Output() selectedCourse = new EventEmitter<Course>();
+  @Output('courseChanged')
+  courseEmitter = new EventEmitter<Course>();
 
-  selectCourse() {
-    this.selectedCourse.emit(this.course);
-  }
+  constructor() {}
 
-  cardClasses() {
-    return { beginner: this.course.category === 'BEGINNER' };
-  }
+  ngOnInit() {}
 
-  cardStyles() {
-    return { 'text-decoration': 'underline' };
+  onSaveClicked(description: string) {
+    this.courseEmitter.emit({ ...this.course, description });
   }
 }

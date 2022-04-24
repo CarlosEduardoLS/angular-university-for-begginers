@@ -5,6 +5,8 @@ import { AppComponent } from './app.component';
 import { CourseCardExamplesComponent } from './course-card-examples/course-card-examples.component';
 import { CourseCardComponent } from './course-card/course-card.component';
 import { CourseImageComponent } from './course-image/course-image.component';
+import { HttpClientModule } from '@angular/common/http';
+import { CoursesService } from '../services/courses.service';
 
 @NgModule({
   declarations: [
@@ -13,8 +15,8 @@ import { CourseImageComponent } from './course-image/course-image.component';
     CourseImageComponent,
     CourseCardExamplesComponent,
   ],
-  imports: [BrowserModule, BrowserAnimationsModule],
-  providers: [],
+  imports: [BrowserModule, BrowserAnimationsModule, HttpClientModule],
+  providers: [CoursesService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

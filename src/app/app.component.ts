@@ -18,4 +18,10 @@ export class AppComponent implements OnInit {
   ngOnInit(): void {
     this.courses$ = this.coursesService.getCourses();
   }
+
+  updateCourse(course: Course) {
+    this.coursesService
+      .updateCourse(course)
+      .subscribe(() => console.log('Course Updated!'));
+  }
 }

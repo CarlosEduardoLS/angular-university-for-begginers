@@ -1,4 +1,8 @@
-# AngularUniversityForBegginers
+# Angular University For Begginers
+
+![Screenshot](https://github.com/CarlosEduardoLS/angular-university-for-begginers/src/assets/angular-for-beginners.png)
+
+This project has created to validate the knowledges learned in the course 'Angular for Beggines' ministering in Angular University
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.0.
 

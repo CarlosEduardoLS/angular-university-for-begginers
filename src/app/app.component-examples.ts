@@ -3,11 +3,11 @@ import { COURSES } from '../db-data';
 import { Course } from './model/course';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
+  selector: 'app-root-examples',
+  templateUrl: './app.component-examples.html',
   styleUrls: ['./app.component.css'],
 })
-export class AppComponent {
+export class AppComponentExample {
   courses = COURSES;
 
   title = 'angular core deep dive';
